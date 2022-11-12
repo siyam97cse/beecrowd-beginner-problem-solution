@@ -1,0 +1,76 @@
+#include <iostream>
+ #include<iomanip>
+using namespace std;
+
+int main() {
+    double a,a1,a2,a3,s,s1,s2,p,p1,p2,sp,pp;
+    cin>>fixed>>setprecision(2)>>a;
+    if(a>=0.00 && a<=2000.00){
+    cout<< "Isento"<<endl;  
+    }
+
+     else if(a>=2000.01 && a<=3000.00){
+      a=a-2000;
+      s= a + a*(.08);
+      p=s-a;
+    cout<<"R$ "<<fixed<<setprecision(2)<<p<<endl;
+    }
+
+    else if(a>=3000.01 && a<=4500.00){
+      a=a-2000;
+      if(a<=1000){
+       s= a + a*(.08);
+      p=s-a;
+      cout<<"R$ "<<fixed<<setprecision(2)<<p<<endl;
+      }
+      else if(a>1000){
+         
+      a1=a-1000;
+      s= a1 + a1*(.18);
+      p=s-a1;
+      a2=1000;
+      s1= a2 + a2*(.08);
+      p1=s1-a2;
+      p2=p1+p;
+    cout<<"R$ "<<fixed<<setprecision(2)<<p2<<endl; 
+      }
+      
+    }
+
+    else if(a>4500.00){
+     a=a-2000;
+      if(a<=1000){
+       s= a + a*(.08);
+      p=s-a;
+      cout<<"R$ "<<fixed<<setprecision(2)<<p<<endl;
+      }
+      else if(a>1000.00 && a<=1500.00){
+         
+      a1=a-1000.00;
+      s= a1 + a1*(.18);
+      p=s-a1;
+      a2=1000.00;
+      s1= a2 + a2*(.08);
+      p1=s1-a2;
+      p2=p1+p;
+    cout<<"R$ "<<fixed<<setprecision(2)<<p2<<endl; 
+      }
+      else if(a>2500.00){
+       a3=a-2500.00;
+       sp=a3 + a3*(.28);
+       pp=sp-a3;
+       
+      a1=1500;
+      s= a1 + a1*(.18);
+      p=s-a1;
+      
+      a2=1000;
+      s1= a2 + a2*(.08);
+      p1=s1-a2;
+      p2=p1+p+pp;
+    cout<<"R$ "<<fixed<<setprecision(2)<<p2<<endl; 
+      }
+    }
+   
+    return 0;
+}
