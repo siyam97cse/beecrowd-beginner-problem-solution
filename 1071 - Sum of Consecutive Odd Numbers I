@@ -1,0 +1,28 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int a,b,i,count,sum=0;
+    int min,max;
+    cin>>a>>b;
+   
+ if(a < b){
+  min = a;
+  max = b;
+ }else{
+  max = a;
+  min = b;
+ }
+for(i = (min + 1); i < max; ++i)
+ {
+  if(i % 2 != 0){
+   sum += i;
+  }
+ }
+
+cout<<sum<<endl;
+
+    return 0;
+}
